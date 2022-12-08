@@ -20,8 +20,14 @@ body {
   height: 75%;
   display: flex;
   align-items: flex-end;
-  justify-content: end;
+  justify-content: space-between;
+  flex-direction: column;
   border-radius: 8px 8px 0px 0px;
+}
+
+.display .initial-calc {
+  color: #2f2e2e;
+  font-size: 30px;
 }
 
 .container > button {
