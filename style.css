@@ -1,5 +1,6 @@
 body {
   background-color: #0d0d0d;
+  font-family: "Orbitron", sans-serif;
 }
 
 .container {
@@ -31,10 +32,14 @@ body {
   height: 100%;
 }
 
+.btn {
+  font-family: "Orbitron", sans-serif;
+}
+
 .container > button:hover {
   background-color: #585656;
 }
 
-.btn-equals {
+.clear {
   grid-column: 1 / -1;
 }
