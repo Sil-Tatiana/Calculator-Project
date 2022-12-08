@@ -46,6 +46,6 @@ body {
   background-color: #585656;
 }
 
-.clear {
+.btn-clear {
   grid-column: 1 / -1;
 }
