@@ -14,14 +14,13 @@ body {
 
 .display {
   grid-column: 1 / -1;
-  background-color: #b9bfb0;
+  background-color: #bfbfbf;
   padding: 16px;
   font-size: 36px;
   height: 75%;
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
-  flex-direction: column;
+  justify-content: flex-end;
   border-radius: 8px 8px 0px 0px;
 }
 
@@ -29,7 +28,7 @@ body {
   cursor: pointer;
   font-size: 32px;
   color: #3b977b;
-  background-color: #2f2e2e;
+  background-color: #10403b;
   height: 100%;
 }
 
@@ -41,6 +40,20 @@ body {
   background-color: #585656;
 }
 
-.btn-clear {
+.btn-equals {
   grid-column: 1 / -1;
+}
+
+button.btn.btn-operation {
+  background-color: #127369;
+  color: #10403b;
+}
+
+button.btn.btn-equals {
+  background-color: #4c5958;
+}
+
+button.btn.btn-operation:hover,
+button.btn.btn-equals:hover {
+  background-color: #585656;
 }
