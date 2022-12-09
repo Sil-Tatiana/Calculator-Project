@@ -20,8 +20,14 @@ body {
   height: 75%;
   display: flex;
   align-items: flex-end;
+  flex-direction: column;
   justify-content: flex-end;
   border-radius: 8px 8px 0px 0px;
+}
+
+.display > .previousValue {
+  color: #585656;
+  font-size: 32px;
 }
 
 .container > button {
