@@ -5,9 +5,19 @@ const btnOperations = document.getElementsByClassName("btn-operation");
 const btnEquals = document.getElementsByClassName("btn-equals");
 const btnClear = document.getElementsByClassName("btn-clear");
 const btnDot = document.getElementsByClassName("btn-dot");
+const display = document.querySelector(".display");
 
 allButtons.addEventListener("click", (event) => {
-  console.log(event.target);
+  const singleBtn = event.target;
+  // console.log(singleBtn);
+  const btnValue = singleBtn.textContent;
+  const displayValue = display.textContent;
+
+  if (displayValue === "0") {
+    display.textContent = btnValue;
+  } else {
+    display.textContent = displayValue + btnValue;
+  }
 });
 // create an add function
 // create an subtraction function
