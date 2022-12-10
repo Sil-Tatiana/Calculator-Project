@@ -10,9 +10,6 @@ const getAllButtons = document.querySelectorAll("button");
 function displayNumber() {
   const display = document.querySelector(".display");
   display.innerText = displayValue;
-  if (displayValue.length > 6) {
-    display.innerText = displayValue.substring(0, 6);
-  }
 }
 
 displayNumber();
@@ -86,13 +83,13 @@ function operatorValue(operator) {
     secondOperator = operator;
     secondValue = displayValue;
     result = operate(Number(firstValue), Number(secondValue), firstOperator);
-    displayValue = roundIt(result);
+    displayValue = result;
     firstValue = displayValue;
   } else if (firstOperator != null && secondOperator != null) {
     secondValue = displayValue;
     result = operate(Number(firstValue), Number(secondValue), secondOperator);
     secondOperator = operator;
-    displayValue = roundIt(result);
+    displayValue = result;
     firstValue = displayValue;
   } else {
     firstOperator = operator;
@@ -109,7 +106,7 @@ function equals() {
     if (result === "Oh!NO!") {
       displayValue = "Oh!NO!";
     } else {
-      displayValue = roundIt(result);
+      displayValue = result;
       firstValue = displayValue;
     }
   } else {
@@ -118,7 +115,7 @@ function equals() {
     if (result === "Oh!NO!") {
       displayValue = "Oh!NO!";
     } else {
-      displayValue = roundIt(result);
+      displayValue = result;
       firstValue = displayValue;
     }
   }
@@ -134,16 +131,10 @@ function clearDisplay() {
 }
 
 function decimalValue(dot) {
-  if (displayValue === firstValue || displayValue === secondValue) {
+  if (!displayValue.includes(dot)) {
+    displayValue += dot;
+  } else if (displayValue === firstValue || displayValue === secondValue) {
     displayValue = "0";
     displayValue += dot;
-  } else if (!displayValue.includes(dot)) {
-    displayValue += dot;
-  }
-}
-
-function roundIt(number) {
-  if (number > 12) {
-    return number.toPrecision(9);
   }
 }
